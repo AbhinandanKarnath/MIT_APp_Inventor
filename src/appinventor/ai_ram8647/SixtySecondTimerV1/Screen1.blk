@@ -1,0 +1,226 @@
+<!DOCTYPE YACodeBlocks SYSTEM "/yacodeblocks/support/save_format.dtd">
+<YACodeBlocks ya-version="42" lang-version="13">
+<Pages><Page page-name=" " page-color="237 245 211" page-width="1440" page-height="1600" page-drawer="My Definitions" >
+<PageBlocks>
+<Block id="733" genus-name="Button-Click" has-focus="yes" >
+<Location><X>205</X><Y>48</Y></Location>
+<Label>ButtonPlus.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="739" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>TextBox1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="739" genus-name="componentSetter" >
+<Location><X>233</X><Y>80</Y></Location>
+<Label>TextBox1.Text</Label>
+<BeforeBlockId>733</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="741" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="741" genus-name="number-plus" >
+<Location><X>377</X><Y>83</Y></Location>
+<Label>+</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="739" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="745" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="743" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="743" genus-name="number" >
+<Location><X>542</X><Y>90</Y></Location>
+<Label>1</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="741" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>TextBox1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="745" genus-name="componentGetter" >
+<Location><X>387</X><Y>90</Y></Location>
+<Label>TextBox1.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="741" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>TextBox1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="757" genus-name="componentGetter" >
+<Location><X>382</X><Y>200</Y></Location>
+<Label>TextBox1.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="755" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="759" genus-name="number" >
+<Location><X>537</X><Y>200</Y></Location>
+<Label>1</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="755" ></BlockConnector></Plug>
+</Block>
+<Block id="755" genus-name="number-minus" >
+<Location><X>372</X><Y>193</Y></Location>
+<Label>\u2212</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="753" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="757" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="759" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>TextBox1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="753" genus-name="componentSetter" >
+<Location><X>228</X><Y>190</Y></Location>
+<Label>TextBox1.Text</Label>
+<BeforeBlockId>747</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="755" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="747" genus-name="Button-Click" >
+<Location><X>200</X><Y>158</Y></Location>
+<Label>ButtonMinus.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="753" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="855" genus-name="true" >
+<Location><X>857</X><Y>90</Y></Location>
+<Label>true</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="853" ></BlockConnector></Plug>
+</Block>
+<BlockStub><StubParentName>Clock1.TimerEnabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="853" genus-name="componentSetter" >
+<Location><X>673</X><Y>87</Y></Location>
+<Label>Clock1.TimerEnabled</Label>
+<BeforeBlockId>761</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="855" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="761" genus-name="Button-Click" >
+<Location><X>645</X><Y>55</Y></Location>
+<Label>ButtonStart.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="853" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="945" genus-name="false" >
+<Location><X>860</X><Y>187</Y></Location>
+<Label>false</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="943" ></BlockConnector></Plug>
+</Block>
+<Block id="1013" genus-name="Sound-Stop" >
+<Location><X>676</X><Y>222</Y></Location>
+<Label>SoundAlarm.Stop</Label>
+<BeforeBlockId>943</BeforeBlockId>
+</Block>
+<BlockStub><StubParentName>Clock1.TimerEnabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="943" genus-name="componentSetter" >
+<Location><X>676</X><Y>184</Y></Location>
+<Label>Clock1.TimerEnabled</Label>
+<BeforeBlockId>937</BeforeBlockId>
+<AfterBlockId>1013</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="945" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="937" genus-name="Button-Click" >
+<Location><X>648</X><Y>152</Y></Location>
+<Label>ButtonStop.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="943" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>TextBox1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="849" genus-name="componentGetter" >
+<Location><X>539</X><Y>310</Y></Location>
+<Label>TextBox1.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="847" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="851" genus-name="number" >
+<Location><X>694</X><Y>310</Y></Location>
+<Label>1</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="847" ></BlockConnector></Plug>
+</Block>
+<Block id="847" genus-name="number-minus" >
+<Location><X>529</X><Y>303</Y></Location>
+<Label>\u2212</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="845" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="849" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="851" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>TextBox1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="977" genus-name="componentGetter" >
+<Location><X>469</X><Y>356</Y></Location>
+<Label>TextBox1.Text</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="975" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<Block id="979" genus-name="number" >
+<Location><X>624</X><Y>356</Y></Location>
+<Label>0</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="975" ></BlockConnector></Plug>
+</Block>
+<Block id="975" genus-name="yail-equal" >
+<Location><X>459</X><Y>349</Y></Location>
+<Label>=</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="971" ></BlockConnector></Plug>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="977" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="" position-type="bottom" con-block-id="979" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="985" genus-name="false" >
+<Location><X>621</X><Y>393</Y></Location>
+<Label>false</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="983" ></BlockConnector></Plug>
+</Block>
+<Block id="1011" genus-name="Sound-Play" >
+<Location><X>437</X><Y>428</Y></Location>
+<Label>SoundAlarm.Play</Label>
+<BeforeBlockId>983</BeforeBlockId>
+</Block>
+<BlockStub><StubParentName>Clock1.TimerEnabled</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="983" genus-name="componentSetter" >
+<Location><X>437</X><Y>390</Y></Location>
+<Label>Clock1.TimerEnabled</Label>
+<BeforeBlockId>971</BeforeBlockId>
+<AfterBlockId>1011</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="985" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="971" genus-name="if" >
+<Location><X>385</X><Y>346</Y></Location>
+<Label>if</Label>
+<BeforeBlockId>845</BeforeBlockId>
+<Sockets num-sockets="2" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="test" position-type="single" con-block-id="975" ></BlockConnector>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then-do" is-indented="yes" position-type="single" con-block-id="983" ></BlockConnector>
+</Sockets>
+</Block>
+<BlockStub><StubParentName>TextBox1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="845" genus-name="componentSetter" >
+<Location><X>385</X><Y>300</Y></Location>
+<Label>TextBox1.Text</Label>
+<BeforeBlockId>839</BeforeBlockId>
+<AfterBlockId>971</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="847" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="839" genus-name="Clock-Timer" >
+<Location><X>357</X><Y>268</Y></Location>
+<Label>Clock1.Timer</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="845" ></BlockConnector>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+
+</Pages><YoungAndroidMaps><YoungAndroidUuidMap>
+<YoungAndroidUuidEntry uuid="-226685810" component-id="HorizontalArrangement1" component-genus="HorizontalArrangement" component-version="1" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="2015474876" component-id="ButtonStart" component-genus="Button" component-version="3" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-2101404426" component-id="SoundAlarm" component-genus="Sound" component-version="3" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="0" component-id="Screen1" component-genus="Form" component-version="6" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-1317885953" component-id="ButtonPlus" component-genus="Button" component-version="3" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="1924636270" component-id="TextBox1" component-genus="TextBox" component-version="3" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="1605625385" component-id="Clock1" component-genus="Clock" component-version="1" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="863986773" component-id="ButtonStop" component-genus="Button" component-version="3" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="936619805" component-id="ButtonMinus" component-genus="Button" component-version="3" ></YoungAndroidUuidEntry>
+</YoungAndroidUuidMap>
+</YoungAndroidMaps>
+</YACodeBlocks>

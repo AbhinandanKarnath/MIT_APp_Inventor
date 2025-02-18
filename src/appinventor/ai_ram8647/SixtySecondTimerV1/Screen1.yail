@@ -1,0 +1,103 @@
+#|
+$Source $Yail
+|#
+
+(define-form appinventor.ai_ram8647.SixtySecondTimerV1.Screen1 Screen1)
+(require <com.google.youngandroid.runtime>)
+;;; Screen1
+(do-after-form-creation (set-and-coerce-property! Screen1 'Icon "clock.png" 'text)
+(set-and-coerce-property! Screen1 'Title "Sixty Second Timer" 'text)
+)
+;;; HorizontalArrangement1
+(add-component Screen1 HorizontalArrangement HorizontalArrangement1 (set-and-coerce-property! HorizontalArrangement1 'Width -2 'number)
+)
+;;; ButtonPlus
+(add-component HorizontalArrangement1 Button ButtonPlus (set-and-coerce-property! ButtonPlus 'FontSize 30.0 'number)
+(set-and-coerce-property! ButtonPlus 'Text "+" 'text)
+(set-and-coerce-property! ButtonPlus 'Width -2 'number)
+)
+(define-event ButtonPlus Click()
+ (set-this-form)
+ (set-and-coerce-property! TextBox1 'Text (call-yail-primitive + (list (get-property TextBox1 Text)
+ 1)
+ '( number number)
+ "+")
+ 'text)
+
+)
+;;; TextBox1
+(add-component HorizontalArrangement1 TextBox TextBox1 (set-and-coerce-property! TextBox1 'Enabled #f 'boolean)
+(set-and-coerce-property! TextBox1 'FontSize 24.0 'number)
+(set-and-coerce-property! TextBox1 'Height -2 'number)
+(set-and-coerce-property! TextBox1 'Hint "Hint for TextBox1" 'text)
+(set-and-coerce-property! TextBox1 'Text "10" 'text)
+(set-and-coerce-property! TextBox1 'TextAlignment 1 'number)
+(set-and-coerce-property! TextBox1 'Width -2 'number)
+)
+;;; ButtonMinus
+(add-component HorizontalArrangement1 Button ButtonMinus (set-and-coerce-property! ButtonMinus 'FontSize 30.0 'number)
+(set-and-coerce-property! ButtonMinus 'Text "-" 'text)
+(set-and-coerce-property! ButtonMinus 'Width -2 'number)
+)
+(define-event ButtonMinus Click()
+ (set-this-form)
+ (set-and-coerce-property! TextBox1 'Text (call-yail-primitive - (list (get-property TextBox1 Text)
+ 1)
+ '( number number)
+ "\u2212")
+ 'text)
+
+)
+;;; ButtonStart
+(add-component Screen1 Button ButtonStart (set-and-coerce-property! ButtonStart 'FontSize 30.0 'number)
+(set-and-coerce-property! ButtonStart 'Text "Start" 'text)
+(set-and-coerce-property! ButtonStart 'Width -2 'number)
+)
+(define-event ButtonStart Click()
+ (set-this-form)
+ (set-and-coerce-property! Clock1 'TimerEnabled #t 'boolean)
+
+)
+;;; ButtonStop
+(add-component Screen1 Button ButtonStop (set-and-coerce-property! ButtonStop 'FontSize 30.0 'number)
+(set-and-coerce-property! ButtonStop 'Text "Stop" 'text)
+(set-and-coerce-property! ButtonStop 'Width -2 'number)
+)
+(define-event ButtonStop Click()
+ (set-this-form)
+ (set-and-coerce-property! Clock1 'TimerEnabled #f 'boolean)
+
+(call-component-method 'SoundAlarm 'Stop (list)
+ '())
+
+)
+;;; Clock1
+(add-component Screen1 Clock Clock1 (set-and-coerce-property! Clock1 'TimerEnabled #f 'boolean)
+)
+(define-event Clock1 Timer()
+ (set-this-form)
+ (set-and-coerce-property! TextBox1 'Text (call-yail-primitive - (list (get-property TextBox1 Text)
+ 1)
+ '( number number)
+ "\u2212")
+ 'text)
+
+(if (call-yail-primitive yail-equal? (list (get-property TextBox1 Text)
+ 0)
+ '( any any)
+ "=")
+ (begin (set-and-coerce-property! Clock1 'TimerEnabled #f 'boolean)
+
+(call-component-method 'SoundAlarm 'Play (list)
+ '())
+
+)
+)
+
+)
+;;; SoundAlarm
+(add-component Screen1 Sound SoundAlarm (set-and-coerce-property! SoundAlarm 'Source "AnnoyingAlarmClock.wav" 'text)
+)
+(init-runtime  #f)
+
+
